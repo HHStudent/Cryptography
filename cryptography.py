@@ -52,6 +52,23 @@ def decrypt():
     for x in dlist4:
         print(x, end='')
 
+while running == True:
+    command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+    if command == "e":
+        message = str(input("Message: "))
+        key = str(input("Key: "))
+        encrypt()
+    elif command == "d":
+        dmessage = str(input("Message: "))
+        dkey = str(input("Key: "))
+        decrypt()
+    elif command == "q":
+        print("Goodbye!")
+        running == False
+    else:
+        print("Did not understand command, try again.")
+
+"""
 if command == "e":
     message = str(input("Message: "))
     key = str(input("Key: "))
@@ -64,3 +81,4 @@ elif command == "q":
     print("Goodbye!")
 else:
     print("Did not understand command, try again.")
+"""
