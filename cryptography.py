@@ -53,7 +53,6 @@ def decrypt():
         print(x, end='')
 
 while running == True:
-    command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     if command == "e":
         message = str(input("Message: "))
         key = str(input("Key: "))
