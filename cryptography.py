@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Dimitri
-Credit: http://stackoverflow.com/questions/3391076/repeat-string-to-certain-length
+Credit: http://stackoverflow.com/questions/3391076/repeat-string-to-certain-length, http://stackoverflow.com/questions/14050824/add-sum-of-values-of-two-lists-into-new-list
 
 Assignment:
 
