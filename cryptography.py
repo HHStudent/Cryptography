@@ -52,7 +52,7 @@ def decrypt():
         if m%86 == 0:
             dl = "!"
         else:
-            dl = associations[m%86]
+            dl = associations[(m%86)]
         dlist4.append(dl)
     for x in dlist4:
         print(x, end='')
