@@ -56,12 +56,12 @@ running = 0
 while running == 0:
     if command == "e":
         message = str(input("Message: "))
-        key = str(input("Key: "))
+        key = input("Key: ")
         encrypt()
         print(/n)
     elif command == "d":
-        dmessage = str(input("Message: "))
-        dkey = str(input("Key: "))
+        dmessage = input("Message: ")
+        dkey = input("Key: ")
         decrypt()
         print(/n)
     elif command == "q":
