@@ -28,10 +28,15 @@ def encrypt():
     list3 = [x + y for x, y in zip(list1, list21)]
     list4 = []
     for n in list3:
-        if n%86 == 0 and n!= 0:
-            l = "!"
+        if n > 86:
+            n = (n%86 - 1)
+            l = associations[m]
+        elif n == 86:
+            l = '!'
+        elif n == 172:
+            l = '!'
         else:
-            l = associations[n%86]
+            l = associations[n]
         list4.append(l)
     for x in list4:
         print(x, end='')
@@ -49,10 +54,15 @@ def decrypt():
     dlist3 = [x - y for x, y in zip(dlist1, list22)]
     dlist4 = []
     for m in dlist3:
-        if m%86 == 0 and m != 0:
-            dl = "!"
+        if m > 86:
+            m = (m%86 - 1)
+            dl = associations[m]
+        elif m == 86:
+            d = '!'
+        elif m == 172:
+            dl = '!'
         else:
-            dl = associations[(m%86)]
+            dl = associations[m]
         dlist4.append(dl)
     for x in dlist4:
         print(x, end='')
