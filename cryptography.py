@@ -58,18 +58,18 @@ while running == 0:
         message = str(input("Message: "))
         key = str(input("Key: "))
         encrypt()
-        print(/n)
+        print('\n')
     elif command == "d":
         dmessage = str(input("Message: "))
         dkey = str(input("Key: "))
         decrypt()
-        print(/n)
+        print('\n')
     elif command == "q":
         print("Goodbye!")
         running += 1
     else:
         print("Did not understand command, try again.")
-        print(/n)
+        print('\n')
 
 """
 if command == "e":
