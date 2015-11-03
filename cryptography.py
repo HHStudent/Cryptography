@@ -10,7 +10,6 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 
 def rep(s, m):
     a, b = divmod(m, len(s))
@@ -54,6 +53,7 @@ def decrypt():
 
 running = 0
 while running == 0:
+    command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     if command == "e":
         message = str(input("Message: "))
         key = str(input("Key: "))
