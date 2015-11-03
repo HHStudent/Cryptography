@@ -52,20 +52,24 @@ def decrypt():
     for x in dlist4:
         print(x, end='')
 
-while running == True:
+running = 0
+while running == 0:
     if command == "e":
         message = str(input("Message: "))
         key = str(input("Key: "))
         encrypt()
+        print(\n)
     elif command == "d":
         dmessage = str(input("Message: "))
         dkey = str(input("Key: "))
         decrypt()
+        print(\n)
     elif command == "q":
         print("Goodbye!")
-        running == False
+        running += 1
     else:
         print("Did not understand command, try again.")
+        print(\n)
 
 """
 if command == "e":
