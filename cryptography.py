@@ -29,7 +29,7 @@ def encrypt():
     list4 = []
     for n in list3:
         if n%86 == 0:
-            l = !
+            l = "!"
         else:
             l = associations[n%86]
         list4.append(l)
@@ -50,7 +50,7 @@ def decrypt():
     dlist4 = []
     for m in dlist3:
         if m%86 == 0:
-            dl = !
+            dl = "!"
         else:
             dl = associations[m%86]
         dlist4.append(dl)
