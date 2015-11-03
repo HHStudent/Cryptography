@@ -30,7 +30,7 @@ def encrypt():
     for n in list3:
         if n > 86:
             n = (n%86 - 1)
-            l = associations[m]
+            l = associations[n]
         elif n == 86:
             l = '!'
         elif n == 172:
