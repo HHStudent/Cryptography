@@ -1,7 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Dimitri
+Credit: http://stackoverflow.com/questions/3391076/repeat-string-to-certain-length
 
 Assignment:
 
@@ -12,6 +12,10 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 
+def rep(s, m):
+    a, b = divmod(m, len(s))
+    return s * a + s[:b]
+
 def encrypt():
     list1 = []
     list2 = []
@@ -21,7 +25,8 @@ def encrypt():
     for y in key:
         keyletter = associations.find(y)
         list2.append(keyletter)
-    list3 = [x + y for x, y in zip(list1, list2)]
+        list21 = rep(list2, len(list1))
+    list3 = [x + y for x, y in zip(list1, list21)]
     list4 = []
     for n in list3:
         l = associations[n]
@@ -38,7 +43,8 @@ def decrypt():
     for y in dkey:
         dkeyletter = associations.find(y)
         dlist2.append(dkeyletter)
-    dlist3 = [x - y for x, y in zip(dlist1, dlist2)]
+        list22 = rep(dlist2, len(dlist1))
+    dlist3 = [x - y for x, y in zip(dlist1, list22)]
     dlist4 = []
     for m in dlist3:
         dl = associations[m]
