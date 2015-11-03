@@ -19,17 +19,32 @@ def encrypt():
         letter = associations.find(x)
         list1.append(letter)
     for y in key:
-        keyletter = associations.find(x)
+        keyletter = associations.find(y)
         list2.append(keyletter)
     list3 = [x + y for x, y in zip(list1, list2)]
     list4 = []
     for n in list3:
         l = associations[n]
         list4.append(l)
-    print(list4)
+    for x in list4:
+        print(x, end='')
 
-
-
+def decrypt():
+    dlist1 = []
+    dlist2 = []
+    for x in dmessage:
+        dletter = associations.find(x)
+        dlist1.append(dletter)
+    for y in dkey:
+        dkeyletter = associations.find(y)
+        dlist2.append(dkeyletter)
+    dlist3 = [x - y for x, y in zip(dlist1, dlist2)]
+    dlist4 = []
+    for m in dlist3:
+        dl = associations[m]
+        dlist4.append(dl)
+    for x in dlist4:
+        print(x, end='')
 
 if command == "e":
     message = str(input("Message: "))
@@ -38,6 +53,7 @@ if command == "e":
 elif command == "d":
     dmessage = str(input("Message: "))
     dkey = str(input("Key: "))
+    decrypt()
 elif command == "q":
     print("Goodbye!")
 else:
