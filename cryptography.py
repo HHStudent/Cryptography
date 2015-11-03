@@ -64,4 +64,3 @@ elif command == "q":
     print("Goodbye!")
 else:
     print("Did not understand command, try again.")
-
