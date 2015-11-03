@@ -49,7 +49,7 @@ def decrypt():
     dlist3 = [x - y for x, y in zip(dlist1, list22)]
     dlist4 = []
     for m in dlist3:
-        dl = associations[m]
+        dl = associations[m%86]
         dlist4.append(dl)
     for x in dlist4:
         print(x, end='')
