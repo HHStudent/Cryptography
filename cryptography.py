@@ -55,7 +55,7 @@ def decrypt():
         if m > len(associations):
             m1 = m-len(associations)
             dl = associations[m1]
-        elif n == len(associations):
+        elif m == len(associations):
             dl = '!'
         else:
             dl = associations[m]
